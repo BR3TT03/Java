@@ -1,0 +1,32 @@
+import org.opencv.core.*;
+import org.opencv.imgcodecs.Imgcodecs;
+import org.opencv.videoio.VideoCapture;
+public class OpenCVDemo {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+		VideoCapture camera=new VideoCapture(0);
+		
+		if(!camera.isOpened()) {
+			System.out.println("Camera is not opened");
+		}
+		else {
+			Mat frame=new Mat();
+			while(true) {
+				if(camera.read(frame)) {
+					System.out.println("Frame Obtained");
+					System.out.println("Captured frame width"+frame.width()+"Capture frame height"+frame.height());
+					Imgcodecs.imwrite("C:/Users/rockb/Pictures/OpenCVCap/Brett.jpg", frame);
+					System.out.println("OK");
+					break;
+					
+					
+				}
+			}
+		}
+		camera.release();
+		
+	}
+
+}

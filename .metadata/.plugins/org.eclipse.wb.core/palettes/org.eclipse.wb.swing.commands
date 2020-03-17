@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<commands>
+	<addCategory
+		id="custom_1558094004792"
+		name="tab1"
+		description=""
+		visible="true"
+		open="true"
+		nextCategory="org.eclipse.wb.swing.system"/>
+	<removeEntry
+		id="org.eclipse.wb.swing.layouts com.jgoodies.forms.layout.FormLayout"/>
+</commands>
